@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: pal-tracker-container
-          image: hvballuru/pal-tracker:v1
+          image: hvballuru/pal-tracker:v2
           env:
             - name: WELCOME_MESSAGE
               valueFrom:
