@@ -37,5 +37,10 @@ spec:
             - name: WELCOME_MESSAGE
               valueFrom:
                configMapKeyRef:
-                 name: pal-tracker-config
+                 name: pal-tracker
                  key: welcome.message
+            - name: MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE
+              valueFrom:
+               configMapKeyRef:
+                 name: pal-tracker
+                 key: management.endpoints.web.exposure.include

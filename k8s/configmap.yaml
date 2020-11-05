@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: pal-tracker-config
-  labels:
-    app: pal-tracker
-data:
-  welcome.message: "hello from kubernetes liveness probe v4"
-  MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "info,health,palTrackerFailure"
