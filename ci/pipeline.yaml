@@ -8,7 +8,7 @@ jobs:
   - task: compile-test
     config:
      platform: linux
-     image-resource:
+     image_resource:
        type: docker-image
        source:
          repository: pivotaleducation/boot-build
