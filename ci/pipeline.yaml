@@ -7,14 +7,14 @@ jobs:
     trigger: true
   - task: compile-test
     config:
-     platform: linux
-     image_resource:
-       type: docker-image
-       source:
-         repository: pivotaleducation/boot-build
-     inputs:
-     - name: source-code
-     run:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: pivotaleducation/boot-build
+      inputs:
+      - name: source-code
+      run:
         path: sh
         args:
           - -exc
@@ -75,9 +75,10 @@ jobs:
 
             BUILD_NUMBER=`cat version/number`
 
-            grep "concourse.run_number" source-code/k8s/environments/review/deployment.yaml
-            sed -i "s/concourse.run_number/${BUILD_NUMBER}/g" source-code/k8s/environments/review/deployment.yaml
-            kubectl apply -k source-code/k8s/environments/review
+            cd source-code
+            grep "concourse.run_number" k8s/environments/review/deployment.yaml
+            sed -i "s/concourse.run_number/${BUILD_NUMBER}/g" k8s/environments/review/deployment.yaml
+            kubectl apply -k k8s/environments/review
 resources:
 - name: source-code
   type: git
