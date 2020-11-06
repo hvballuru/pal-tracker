@@ -4,3 +4,4 @@ metadata:
   name: pal-tracker
 data:
   welcome.message: "hello from review app built for JDBC template lab"
+  spring.datasource.hikari.maximumpoolsize: "1"
