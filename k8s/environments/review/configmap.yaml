@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: pal-tracker
 data:
-  welcome.message: "hello from review app built through Concourse Attempt 2"
+  welcome.message: "hello from review app built through Concourse Attempt 3"
